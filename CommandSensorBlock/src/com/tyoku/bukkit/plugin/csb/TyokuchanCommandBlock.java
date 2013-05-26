@@ -85,7 +85,6 @@ public class TyokuchanCommandBlock {
 				for (String cmd : commandList) {
 					//CommandSensorBlock.logger.info(String.format("[EXEC(%s)]%s",lastUser,cmd));
 					Bukkit.getServer().dispatchCommand(cs, cmd.replaceAll("@p", p.getName()));
-					p.updateInventory();
 				}
 			}
 		}else{
@@ -93,6 +92,9 @@ public class TyokuchanCommandBlock {
 				//CommandSensorBlock.logger.info(String.format("[EXEC(%s)]%s",lastUser,cmd));
 				Bukkit.getServer().dispatchCommand(cs, cmd);
 			}
+		}
+		for(Player p: Bukkit.getOnlinePlayers()){
+			p.updateInventory();
 		}
 	}
 
