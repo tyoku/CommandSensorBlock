@@ -1,0 +1,18 @@
+name: CommandSensorBlock
+main: com.tyoku.bukkit.plugin.csb.CommandSensorBlock
+version: 0.1
+commands:
+   csb:
+      description:
+          ターゲットしてるブロックに対しスイッチ等で呼ぶコマンドを設定します。ｚ
+          同じブロックにコマンドを重ねると、連続でコマンドを実行するようになります。
+      usage: /csb <cmd> <arg0> <arg1> <arg2>....
+   csbclear:
+      description: ターゲットしてるブロックのコマンドをクリアします。
+      usage: /csbclear
+   csblist:
+      description: ターゲットしてるブロックに登録されているコマンドを参照します。
+      usage: /csblist
+   csbdistance:
+      description: \@p利用時に対象となるプレイヤーの距離を設定する。
+      usage: /csbdistance <distance>
